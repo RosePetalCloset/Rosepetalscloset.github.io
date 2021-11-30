@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "nunito", sans-serif;
+}
+
+nav {
+  position: fixed;
+  z-index: -100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #eee;
+  background: rgba(255, 255, 255, 0.397);
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 50px 0 100px;
+  z-index: 100;
+}
+
+nav .logo {
+  height: 70px;
+  width: 200px;
+}
+
+nav .logo img {
+  height: auto;
+  width: 50px;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: #2d314d;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+ nav ul li a:hover {
+  color: #fff5f5;
+  background-color: #2D314D;
+}
+
+nav .menu-btn i {
+  color: black;
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+nav.sticky {
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  background: #2D314D;
+}
+
+nav.sticky ul li a {
+  color: #ffffff;
+}
+
+ nav.sticky ul li a:hover {
+  color: black;
+  background-color: #ffffff;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  nav {
+    padding: 0 40px 0 50px;
+  }
+}
+
+@media (max-width: 920px) {
+  nav .menu-btn i {
+    display: block;
+  }
+  #click:checked ~ .menu-btn i::before {
+    content: "\f00d";
+  }
+  nav ul {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: rgba(71, 71, 71, 0.589);
+    -webkit-backdrop-filter: blur(13px);
+            backdrop-filter: blur(13px);
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    -webkit-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+  }
+  nav ul li {
+    width: 100%;
+    margin: 0 0;
+  }
+  nav ul li a {
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    border-radius: 0;
+    padding: 20px 0;
+    -webkit-transition: 0.5s all ease;
+    transition: 0.5s all ease;
+  }
+  #click:checked ~ ul {
+    left: 0;
+  }
+  #click:checked ~ ul li a {
+    margin-left: 0px;
+  }
+  nav.sticky {
+    -webkit-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+    background: #2D314D;
+  }
+  nav.sticky ul li a {
+    color: #ffffff;
+  }
+ nav.sticky ul li a:hover {
+    color: black;
+    background-color: #ffffff;
+  }
+  nav.sticky .menu-btn i {
+    color: #ffffff;
+  }
+}
